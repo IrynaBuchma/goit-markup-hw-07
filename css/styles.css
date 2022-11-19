@@ -560,19 +560,19 @@ padding-bottom: 30px;
 .customers__title {
     margin-bottom: 50px;
 }
-.customers-list {
+.customers__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
-.customers-list-item {
+.customers__item {
     width: 170px;
     height: 92px;
     justify-content: center;
     align-items: center;
 }
-.customers-link {
+.customers__link {
     display: inline-block;
     padding: 13px 32px;
     justify-content: center;
@@ -585,12 +585,12 @@ padding-bottom: 30px;
 
     transition: border-color 250ms var(--transition-timing-function), fill 250ms var(--transition-timing-function);
 }
-.customers-icon {
+.customers__icon {
     margin: 0px;
 
 }
-.customers-link:hover,
-.customers-link:focus {
+.customers__link:hover,
+.customers__link:focus {
     fill: var(--second-color);
     border-color: var(--second-color);
 }
