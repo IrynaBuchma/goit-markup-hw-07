@@ -488,18 +488,18 @@ transition: background-color 250ms var(--transition-timing-function);
 }
 
   /*What-we-do*/
-.whatwedo-title {
+.whatwedo__title {
     margin-bottom: 50px;
 }
-.whatwedo-list {
+.whatwedo__list {
     display: flex;
     flex-wrap: wrap;
     gap: var(--img-gap);
 }
-.whatwedo-item {
+.whatwedo__item {
     position: relative;
 }  
-.whatwedo-paragraph {
+.whatwedo-description {
     display: inline-flex;
     position:absolute;
     width: 370px;
