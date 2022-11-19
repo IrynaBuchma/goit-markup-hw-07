@@ -425,33 +425,36 @@ a {
     text-align: center;
 }
 .hero__title {
+    margin: 0px auto 30px auto;
+
+    text-align: center;
     color: var(--accent-color);
     font-weight: 900;
     font-size: 44px;
     line-height: calc(60/44);
-    text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     max-width: 696px;
-    margin: 0px auto 30px auto;
 }
 .hero__button {
-font-family: inherit;
-font-weight: 700;
-font-size: 16px;
-line-height: calc(30/16);
-letter-spacing: 0.06em;
-color: var(--accent-color);
-background-color: var(--second-color);
-cursor: pointer;
-box-shadow: 0px 4px 4px var(--button-order-shadow);
-border-radius: 4px;
-padding: 8px 32px;
-border-color: transparent;
-margin: 0px auto;
-text-align: center;
+    margin: 0px auto;
+    padding: 8px 32px;
+    cursor: pointer;
 
-transition: background-color 250ms var(--transition-timing-function);
+    text-align: center;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30/16);
+    letter-spacing: 0.06em;
+    color: var(--accent-color);
+
+    background-color: var(--second-color);
+    border-color: transparent;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px var(--button-order-shadow);
+
+    transition: background-color 250ms var(--transition-timing-function);
 }
 .hero__button:hover, .hero__button:focus {
     background-color: var(--button-order-active);
@@ -481,8 +484,10 @@ transition: background-color 250ms var(--transition-timing-function);
 .features__icon {
     justify-content: center;
     align-items: center;
+
     margin-bottom: 30px;
     padding: 25px 100px;
+
     background-color: var(--background-color);
 }
 
@@ -501,14 +506,14 @@ transition: background-color 250ms var(--transition-timing-function);
 .whatwedo-description {
     display: inline-flex;
     position:absolute;
+    justify-content: center ;
+    align-items: center;
+
     width: 370px;
     height: 70px;
     bottom: 0px;
     right: 0px;
-    background-color: rgba(47, 48, 58, 0.8);
-
-    justify-content: center ;
-    align-items: center;
+    background-color: var(--whatwedo-bg-color);
 
     font-weight: 700;
     font-size: 14px;
@@ -532,7 +537,7 @@ transition: background-color 250ms var(--transition-timing-function);
 }
 .ourteam__item {
     background-color: var(--accent-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px var(--button-shadow-third), 0px 1px 1px var(--modal-window-shadow), 0px 2px 1px var(--modal-window-bgc);
     border-radius: 0px 0px 4px 4px;
     flex-basis: calc((100% - var(--img-gap)*(var(--img-quantity-ourteam)-1)) / var(--img-quantity-ourteam));
 }
@@ -738,7 +743,7 @@ padding-bottom: 30px;
     fill: var(--second-color);
     background-color: inherit;
 }
-.modal-title {
+.modal__title {
     font-weight: 700;
     font-size: 20px;
     line-height: calc(23/20);
@@ -754,22 +759,22 @@ padding-bottom: 30px;
     align-items: center;
     
 }
-.form-field {
+.modal-form__field {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
-.form-field:nth-child(4) {
+.modal-form__field:nth-child(4) {
     margin-bottom: 20px;
 }
-.form-label {
+.modal-form__label {
     font-size: 12px;
     line-height: calc(14/12);
     letter-spacing: 0.01em;
     color: var(--paragraph-color);
     margin-bottom: 4px;
 }
-.field-input {
+.modal-form__input {
     position: relative;
     
     font-size: 16px;
@@ -788,27 +793,27 @@ padding-bottom: 30px;
 
     transition: border-color 250ms var(--transition-timing-function);
 }
-.field-input:hover,
-.field-input:focus {    
+.modal-form__input:hover,
+.modal-form__input:focus {    
     border-color: var(--second-color);
 }
-.field-input:focus-within {
+.modal-form__input:focus-within {
     border-color: var(--second-color);
 }
-.field-icon {
+.modal-form__icon {
     position: absolute;
     transform: translate(18px, 32px);
 
     transition: fill 250ms var(--transition-timing-function);
 }
-.form-field:hover,
-.form-field:focus {
+.modal-form__field:hover,
+.modal-form__field:focus {
     fill: var(--second-color);
 }
-.form-field:focus-within {
+.modal-form__field:focus-within {
     fill: var(--second-color);
 }
-.comments {
+.modal-form__comments {
     
     font-size: 12px;
     line-height: calc(14/12);
@@ -824,14 +829,14 @@ padding-bottom: 30px;
 
     transition: border-color 250ms var(--transition-timing-function);
 } 
-.comments:hover,
-.comments:focus {    
+.modal-form__comments:hover,
+.modal-form__comments:focus {    
     border-color: var(--second-color);
 }
-.comments:focus-within {
+.modal-form__comments:focus-within {
     border-color: var(--second-color);
 }
-.form-agreement {
+.agreement {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -839,7 +844,7 @@ padding-bottom: 30px;
     
     margin-bottom: 30px;
 }
-.form-checkbox {
+.agreement__checkbox {
     appearance: none;
     cursor: pointer;
 }
@@ -858,31 +863,31 @@ padding-bottom: 30px;
     border-color: transparent;
     background-size: contain;
 }*/
-.form-checkbox-icon .unchecked {
+.agreement__icon .unchecked {
     opacity: 1;
     transition: opacity 250ms var(--transition-timing-function);
 }
-.form-checkbox:checked + .form-checkbox-icon .unchecked {
+.agreement__checkbox:checked + .agreement__icon .unchecked {
     opacity: 0;
 }
-.form-checkbox-icon .checked {
+.agreement__icon .checked {
     opacity: 0;
     transition: opacity 250ms var(--transition-timing-function);
 }
-.form-checkbox:checked +.form-checkbox-icon .checked {
+.agreement__checkbox:checked +.agreement__icon .checked {
     opacity: 1;
 }
 
-.form-agreement-text {
+.agreement__text {
     font-size: 14px;
     line-height: calc(24/14);
     letter-spacing: 0.03em;
     color: var(--paragraph-color);
 }
-.form-agreement-link {
+.agreement__link {
     color: var(--second-color);
 }
-.form-btn {
+.modal-form__btn {
     display: inline-block;
     padding: 10px 52px;
     
@@ -903,7 +908,7 @@ padding-bottom: 30px;
 
     transition: background-color 250ms var(--transition-timing-function);
 }
-.form-btn:hover,
-.form-btn:focus {    
+.modal-form__btn:hover,
+.modal-form__btn:focus {    
     background-color: var(--button-order-active);
 }
