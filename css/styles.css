@@ -53,11 +53,20 @@ display: block;
 .section {
     padding: 94px 0px;
 }
+.section__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42/36);
+    text-align: center;
+}
 .section-whatwedo {
     padding-top: 0px;
 }
 .section-portfolio {
     display: flex;
+}
+.section-ourteam {
+    background-color: var(--background-color);
 }
 .container {
     width: 1200px;
@@ -103,12 +112,6 @@ a {
     color: var(--accent-color);
     box-shadow: 0px 3px 1px var(--button-shadow-first), 0px 1px 2px var(--button-shadow-second), 0px 2px 2px var(--button-shadow-third);
     
-}
-.section-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: calc(42/36);
-    text-align: center;
 }
 /*Header*/
 .page-header {
@@ -518,36 +521,34 @@ transition: background-color 250ms var(--transition-timing-function);
 }
   /*Our Team*/
 .ourteam {
-    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
 }
-.our-team-container {
-display: flex;
-flex-direction: column;
-}
-.our-team-list {
+.ourteam__list {
     display: flex;
     margin-top: 50px;
     flex-wrap: wrap;
     gap: var(--img-gap);
 }
-.ourteam-item {
+.ourteam__item {
     background-color: var(--accent-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     flex-basis: calc((100% - var(--img-gap)*(var(--img-quantity-ourteam)-1)) / var(--img-quantity-ourteam));
 }
-.team-member {
+.member {
 padding-top: 30px;
 padding-bottom: 30px;
 }
-.ourteam-item-title {
+.member__name {
     font-size: 16px;
     font-weight: 500;
     line-height: calc(19/16);
     text-align: center;
     margin-bottom: 10px;
 }
-.ourteam-item-paragraph {
+.member__position {
     font-size: 16px;
     line-height: calc(19/16);
     text-align: center;
@@ -556,8 +557,7 @@ padding-bottom: 30px;
 }
     /*Customers*/
 
-
-.customers-title {
+.customers__title {
     margin-bottom: 50px;
 }
 .customers-list {
