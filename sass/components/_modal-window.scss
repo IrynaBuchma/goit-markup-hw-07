@@ -10,7 +10,7 @@
 
     transition: visibility 1000ms var(--transition-timing-function);
 
-.backdrop.is-hidden {
+&.is-hidden {
     visibility: hidden;
     pointer-events: none;
 }
@@ -32,10 +32,11 @@
     border-radius: 4px;
 
     transition: scale 1000ms var(--transition-timing-function), opacity 1000ms var(--transition-timing-function);
-    }
-.backdrop.is-hidden >.modal {
+    
+.backdrop.is-hidden > & {
        scale: 0;
        opacity: 0;
+}
 }
 .close-btn {
     display: flex;

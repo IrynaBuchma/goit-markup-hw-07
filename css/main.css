@@ -151,7 +151,7 @@ a {
   background: var(--hero-footer-background);
 }
 
-.portfolio, .customers, .ourteam, .whatwedo, .features, .hero, .header-container {
+.portfolio, .customers, .ourteam, .whatwedo, .features, .hero, .footer-container, .header-container {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -276,6 +276,51 @@ a {
 }
 .nav__list .link:hover, .nav__list .link:focus {
   color: var(--second-color);
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--paragraph-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  letter-spacing: 0.02em;
+  -webkit-transition: color 250ms var(--transition-timing-function);
+  transition: color 250ms var(--transition-timing-function);
+}
+.contacts__link:hover, .contacts__link:focus {
+  color: var(--second-color);
+}
+.contacts__icon-envelop {
+  fill: currentColor;
+}
+.contacts__icon-envelop:hover, .contacts__icon-envelop:focus {
+  fill: currentColor;
+}
+.contacts__icon-tel {
+  fill: currentColor;
+}
+.contacts__icon-tel:hover, .contacts__icon-tel:focus {
+  fill: currentColor;
 }
 
 .footer-container {
@@ -778,7 +823,7 @@ a {
   -webkit-transition: visibility 1000ms var(--transition-timing-function);
   transition: visibility 1000ms var(--transition-timing-function);
 }
-.backdrop .backdrop.is-hidden {
+.backdrop.is-hidden {
   visibility: hidden;
   pointer-events: none;
 }
@@ -800,7 +845,6 @@ a {
   -webkit-transition: scale 1000ms var(--transition-timing-function), opacity 1000ms var(--transition-timing-function);
   transition: scale 1000ms var(--transition-timing-function), opacity 1000ms var(--transition-timing-function);
 }
-
 .backdrop.is-hidden > .modal {
   scale: 0;
   opacity: 0;
